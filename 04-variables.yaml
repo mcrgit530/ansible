@@ -1,0 +1,10 @@
+- name: variables
+  hosts: localhost
+  vars:
+   Course: "Ansible"
+   Trainer: "MCR"
+   Duration: "120hrs"
+  tasks: 
+  - name: print variables
+    ansible.builtin.debug:
+      msg: "i am learning {{Course}} from Trainee {{Trainer}} with duration of {{Duration}}."

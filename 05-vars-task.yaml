@@ -2,10 +2,13 @@
   hosts: localhost
   vars:
     Course: "Terraform"
+    Trainer: "MCR"
+    Duration: "120hrs"
   tasks:
   - name: varibales from task level
     vars:
       Course: " Devops"
+      Trainer: "SOs"
       Duration: "69"
     ansible.builtin.debug:
       msg: "i am learning {{Course}} from Trainee {{Trainer}} with duration of {{Duration}}."

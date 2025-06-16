@@ -8,3 +8,14 @@
   - name: print variables
     ansible.builtin.debug:
       msg: "i am learning {{Course}} from Trainee {{Trainer}} with duration of {{Duration}}."
+
+
+#variable precedence
+
+#Arguments
+#Task Level
+#Files
+#Prompt
+#playlevel
+#inventory
+

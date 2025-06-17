@@ -16,5 +16,5 @@
   - name: check for 10
     ansible.builtin.debug:
       msg: "{{number}} equal to 10"
-    when: number | int = 10
+    when: number | int == 10
 

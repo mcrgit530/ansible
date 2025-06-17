@@ -9,15 +9,4 @@
     - linux
     - windows
     - ios
-- name: install packages
-  hosts: localhost
-  tasks:
-  - name: install packages
-    ansible.builtin.apt:
-      name: "{{item}}"
-      state: latest
-      update_cache: yes
-    loop:
-    - nginx
-    - mysql-server
-    
+

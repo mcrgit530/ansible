@@ -8,3 +8,14 @@
     - linux
     - windows
     - ios
+- name: install packages
+  hosts: localhost
+  tasks:
+  - name: install packages
+    ansible.builtin.apt:
+      name: "{{item}}"
+      state: latest
+    loop:
+    - nginx
+    - mysql
+    - jdk-17

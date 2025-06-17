@@ -1,6 +1,6 @@
 - name: loops
   hosts: localhost
-  become: yes
+  become: true
   tasks:
   - name: print os's
     ansible.builtin.debug:
@@ -16,6 +16,8 @@
     ansible.builtin.apt:
       name: "{{item}}"
       state: latest
+      update_cache: yes
     loop:
     - nginx
-    - mysql
+    - mysql-server
+    
